@@ -9,6 +9,7 @@ import net.javaguides.springboot.mapper.AutoUserMapper;
 import net.javaguides.springboot.mapper.UserMapper;
 import net.javaguides.springboot.repository.UserRepository;
 import net.javaguides.springboot.service.UserService;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
+    @Async
     public UserDto createUser(UserDto userDto) {
 
         // convert UserDto into User JPA entity
